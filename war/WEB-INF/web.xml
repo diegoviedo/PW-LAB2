@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>PW2_V2_ONPE_Get_Post</servlet-name>
+		<servlet-class>epis.unsa.PW2_V2_ONPE_Get_PostServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PW2_V2_ONPE_Get_Post</servlet-name>
+		<url-pattern>/pw2_v2_onpe_get_post</url-pattern>
+	</servlet-mapping>
+	
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
