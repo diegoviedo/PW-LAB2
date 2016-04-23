@@ -16,8 +16,8 @@
      <br>NOMBRE:<input type="text" name="nombre123">
      <br>APELLIDO:<input type="text" name="apellido123">
      <br>MIENBRO:<select name="mienbro123">
-    <option value="si">SI</option>
     <option value="no">NO</option>
+    <option value="si">SI</option>
     </select>
     <br>MESA<input type="text" name="mesa123">
     <br> LOCAL<input type="text" name="local123">
