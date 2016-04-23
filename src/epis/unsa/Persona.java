@@ -1,6 +1,6 @@
 package epis.unsa;
 
-import org.datanucleus.store.types.sco.backed.ArrayList;
+
 
 public class Persona {
 	Persona(){};
