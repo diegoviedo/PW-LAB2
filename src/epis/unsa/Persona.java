@@ -1,4 +1,7 @@
 package epis.unsa;
+
+import org.datanucleus.store.types.sco.backed.ArrayList;
+
 public class Persona {
 	Persona(){};
 	private int dni;
@@ -11,7 +14,6 @@ public class Persona {
 	private String piso;
 	private String aula;
 	private String direccion;
-	
 	Persona(int dni,String nombre,String apellidos,String mienbroMesa,
 			String mesaSufragio,String localVotacion, String pabellon, String piso, String aula,String direccion){ 
 		this.dni = dni;
