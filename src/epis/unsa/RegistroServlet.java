@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 
 //@SuppressWarnings("serial")
-public class registro extends HttpServlet {
+public class RegistroServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		resp.setContentType("text/html");

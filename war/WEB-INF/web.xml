@@ -5,20 +5,20 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
-		<servlet-name>PW2_V2_ONPE_Get_Post</servlet-name>
-		<servlet-class>epis.unsa.PW2_V2_ONPE_Get_PostServlet</servlet-class>
+		<servlet-name>Resultado</servlet-name>
+		<servlet-class>epis.unsa.ResultadoServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>PW2_V2_ONPE_Get_Post</servlet-name>
-		<url-pattern>/pw2_v2_onpe_get_post</url-pattern>
+		<servlet-name>Resultado</servlet-name>
+		<url-pattern>/resultado</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
 		<servlet-name>Registro</servlet-name>
-		<servlet-class>epis.unsa.registro</servlet-class>
+		<servlet-class>epis.unsa.RegistroServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Registro</servlet-name>
+		<servlet-name>RegistroServlet</servlet-name>
 		<url-pattern>/registro</url-pattern>
 	</servlet-mapping>
 	
