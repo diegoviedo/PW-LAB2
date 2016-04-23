@@ -41,8 +41,11 @@ public class registro extends HttpServlet {
 				+ "<title>AGREGADO CORRECTAMENTE</title>"
 				+ "</head>"
 				+ "<body>"
-				+ ""
+				+ "<a href='index.html'>BUSCAR</a>"
+				+ "<a href='registro.jsp'>REGISTRAR</a>"
+				+ "<a href='index.html'>VER</a>"
 				+ "<h1>AGREGADO CORRECTAMENTE>"
-				+ "</body></html>");
+				+ "<p>"+dniNum+" "+nombre+" "+apellido+" "+esMiembro+" "+mesa+" "+local+" "+pabellon+" "+piso+" "+aula+" "+direccion
+				+ "</p></body></html>");
 		
 	}}

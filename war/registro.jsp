@@ -11,7 +11,7 @@
 	<a href="index.html">....REGRESAR</a>
   	<a href="index.html">VER</a>
   	
-	<form action ="/" method="get">
+	<form action ="/registro" method="get">
     <br>DNI:<input type="text" name="dni123">
      <br>NOMBRE:<input type="text" name="nombre123">
      <br>APELLIDO:<input type="text" name="apellido123">
