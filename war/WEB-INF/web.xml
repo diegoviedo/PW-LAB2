@@ -18,7 +18,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-class>epis.unsa.RegistroServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>RegistroServlet</servlet-name>
+		<servlet-name>Registro</servlet-name>
 		<url-pattern>/registro</url-pattern>
 	</servlet-mapping>
 	

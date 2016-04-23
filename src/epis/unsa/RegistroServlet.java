@@ -10,12 +10,12 @@ import java.util.ArrayList;
 public class RegistroServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
-		resp.setContentType("text/html");
-		PrintWriter out=resp.getWriter();
-		ArrayList<Persona>poblacion1=(ArrayList<Persona>)getServletContext().getAttribute("poblacion1");
+		
+		ArrayList<Persona>poblacion=(ArrayList<Persona>)getServletContext().getAttribute("poblacion");
 		
 		String dninum=req.getParameter("dni123");
 		int dniNum=Integer.parseInt(dninum);
+		
 		String nombre=req.getParameter("nombre123");
 		String apellido=req.getParameter("apellido123");
 		String mienbro=req.getParameter("mienbro123");
@@ -32,9 +32,13 @@ public class RegistroServlet extends HttpServlet {
 		}else{
 			esMiembro="Si es Miembro de Mesa";
 		}
-		Persona persona1=new Persona(dniNum,nombre,apellido,esMiembro,mesa,local,pabellon,piso,aula,direccion);
-		poblacion1.add(persona1);
-		getServletContext().setAttribute("poblacion1",poblacion1);
+		Persona persona=new Persona(dniNum,nombre,apellido,esMiembro,mesa,local,pabellon,piso,aula,direccion);
+		poblacion.add(persona);
+		
+		getServletContext().setAttribute("poblacion",poblacion);
+		
+		resp.setContentType("text/html");
+		PrintWriter out=resp.getWriter();
 		
 		out.println(
 				"<!DOCTYPE html><html><head>"
