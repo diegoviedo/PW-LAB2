@@ -96,5 +96,23 @@
 				 				font-size:17px; 
 				 				color:blue; 
 				 				font-style:italic; 
+				 				
 				 } 
+				#contenedor {
+				    display: table;
+				    border: 2px solid #000;
+				    width: 300px;
+				    text-align: center;
+				    margin: 0 auto;
+				}
+				#contenidos {
+				    display: table-row;
+				}
+				.columna {
+				    display: table-cell;
+				    border: 1px solid #000;
+				    vertical-align: middle;
+				    padding: 10px;
+				}
+				 
 				

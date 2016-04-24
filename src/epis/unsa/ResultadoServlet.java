@@ -12,23 +12,24 @@ public class ResultadoServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		
-		//Creando arreglo para la clase persona
-		ArrayList<Persona>poblacion1=new ArrayList<Persona>();
+		//preguntando si la variable no existe para crearla.
+		if(getServletContext().getAttribute("poblacion")==null){
+			//Creando arreglo para la clase persona
+			ArrayList<Persona>poblacion1=new ArrayList<Persona>();
 
-		//añadiendo datos al arreglo persona.
-		Persona persona1=new Persona(72126234,"DIEGO","OVIEDO YAURI","No es Miembro de Mesa","301285","IE 104 LA RECOLETA","400","2","10","PASAJE LA RECOLETA");
-		//persona1={72126234,"DIEGO","OVIEDO YAURI",301285,"IE 104 LOS PANMCHITOS",400,2,10,"cALLE OLVIDO"};
-		Persona persona2=new Persona(73868584,"AUDREY","TACCA BARRANTES","Si es Miembro de Mesa","355623","IE LOS PANDAS","200","3","1","CALLE PERAL 507 ");
-		Persona persona3=new Persona(45655339,"RICHARD","ALVAREZ MAMANI","No es Miembro de Mesa","234533","UNIVERSIDAD WOW","100","2","3","CALLE LEGION 107");
-		
-		poblacion1.add(persona1);
-		poblacion1.add(persona2);
-		poblacion1.add(persona3);
-
-		
-		//==>PARTE IMPORTANTE Guardando arreglo poblacion en el conteiner con nombre población
-		//getServletContext().setAttribute("NombreVariableParaGuardarConteiner", VaribaleAGuardar);
-		getServletContext().setAttribute("poblacion", poblacion1);
+			//añadiendo datos al arreglo persona.
+			Persona persona1=new Persona(72126234,"DIEGO","OVIEDO YAURI","No es Miembro de Mesa","301285","IE 104 LA RECOLETA","400","2","10","PASAJE LA RECOLETA");
+			//persona1={72126234,"DIEGO","OVIEDO YAURI",301285,"IE 104 LOS PANMCHITOS",400,2,10,"cALLE OLVIDO"};
+			Persona persona2=new Persona(73868584,"AUDREY","TACCA BARRANTES","Si es Miembro de Mesa","355623","IE LOS PANDAS","200","3","1","CALLE PERAL 507 ");
+			Persona persona3=new Persona(45655339,"RICHARD","ALVAREZ MAMANI","No es Miembro de Mesa","234533","UNIVERSIDAD WOW","100","2","3","CALLE LEGION 107");
+			
+			poblacion1.add(persona1);
+			poblacion1.add(persona2);
+			poblacion1.add(persona3);
+			//==>PARTE IMPORTANTE Guardando arreglo poblacion en el conteiner con nombre población
+			//getServletContext().setAttribute("NombreVariableParaGuardarConteiner", VaribaleAGuardar);
+			getServletContext().setAttribute("poblacion", poblacion1);
+		}
 		
 		ArrayList<Persona>poblacion=(ArrayList<Persona>)getServletContext().getAttribute("poblacion");
 		
@@ -49,6 +50,9 @@ public class ResultadoServlet extends HttpServlet {
 				+"<link rel='stylesheet' type='text/css' href='../css/onpe.css'>"
 				+ "</head>"
 				+ "<body>"
+				+ "<a href='index.html'>BUSCAR </a>"
+				+ "<a href='registro.jsp'>REGISTRAR </a>"
+				+ "<a href='/ver'>VER </a>"
 				+ "	<div class='centro'>"
 				+ "	<div class='titulo'>"
 				+ "			<div class='logo'>"
@@ -96,8 +100,12 @@ public class ResultadoServlet extends HttpServlet {
 			out.print("<!DOCTYPE html><html><head>"
 					+ "<title>DNI NO ENCONTRADO</title>"
 					+ "	</head>"
-					+ "<body><p>NO SE ENCONTRO EL DNI</p>"
-					+ "<p><a href='registro.jsp'>REGISTRAR</a></p>"
+					+ "<body>"
+					+ "<a href='index.html'>BUSCAR </a>"
+					+ "<a href='registro.jsp'>REGISTRAR </a>"
+					+ "<a href='/ver'>VER </a>"
+					+ "<p>NO SE ENCONTRO EL DNI</p>"
+
 					+ "</body></html>");
 		}
 		

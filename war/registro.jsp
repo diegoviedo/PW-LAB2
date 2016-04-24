@@ -8,8 +8,9 @@
 </head>
 
 <body>
-	<a href="index.html">....REGRESAR</a>
-  	<a href="index.html">VER</a>
+	<a href="index.html">BUSCAR </a>
+  	<a href="registro.jsp">REGISTRAR </a>
+  	<a href="/ver">VER </a>
   	
 	<form action ="/registro" method="get">
     <br>DNI:<input type="text" name="dni123">
