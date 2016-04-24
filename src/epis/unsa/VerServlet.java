@@ -53,11 +53,11 @@ public class VerServlet extends HttpServlet {
 		        +"<div class='columna'>Apellidos</div>"
 		        +"<div class='columna'>MienbroDeMesa</div>"
 		        +"<div class='columna'>MesaSufragio</div>"
-		        +"<div class='columna'>LocalVotación</div>"
+		        +"<div class='columna'>LocalVotaci&oacute;n</div>"
 		        +"<div class='columna'>Pabellon</div>"
 		        +"<div class='columna'>Piso</div>"
 		        +"<div class='columna'>Aula</div>"
-		        +"<div class='columna'>Dirección</div>"
+		        +"<div class='columna'>Direcci&oacute;n</div>"
 		    +"</div>"
 				);   
 		for(int i=0;i<poblacion.size();i++){
