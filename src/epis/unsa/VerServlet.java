@@ -12,7 +12,7 @@ public class VerServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		//ArrayList<Persona>poblacion=(ArrayList<Persona>)getServletContext().getAttribute("poblacion");
-		
+		//falta poner css
 		
 		resp.setContentType("text/html");
 		PrintWriter out=resp.getWriter();
