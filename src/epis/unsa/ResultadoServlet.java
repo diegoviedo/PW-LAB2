@@ -52,7 +52,7 @@ public class ResultadoServlet extends HttpServlet {
 				+ "<body>"
 				+ "<a href='index.html'>BUSCAR </a>"
 				+ "<a href='registro.jsp'>REGISTRAR </a>"
-				+ "<a href='/verServlet'>VER </a>"
+				+ "<a href='/ver'>VER </a>"
 				+ "	<div class='centro'>"
 				+ "	<div class='titulo'>"
 				+ "			<div class='logo'>"
@@ -100,8 +100,12 @@ public class ResultadoServlet extends HttpServlet {
 			out.print("<!DOCTYPE html><html><head>"
 					+ "<title>DNI NO ENCONTRADO</title>"
 					+ "	</head>"
-					+ "<body><p>NO SE ENCONTRO EL DNI</p>"
-					+ "<p><a href='registro.jsp'>REGISTRAR</a></p>"
+					+ "<body>"
+					+ "<a href='index.html'>BUSCAR </a>"
+					+ "<a href='registro.jsp'>REGISTRAR </a>"
+					+ "<a href='/ver'>VER </a>"
+					+ "<p>NO SE ENCONTRO EL DNI</p>"
+
 					+ "</body></html>");
 		}
 		
