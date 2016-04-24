@@ -30,15 +30,18 @@ public class ResultadoServlet extends HttpServlet {
 			//getServletContext().setAttribute("NombreVariableParaGuardarConteiner", VaribaleAGuardar);
 			getServletContext().setAttribute("poblacion", poblacion1);
 		}
-		
+		boolean entro=false;
 		ArrayList<Persona>poblacion=(ArrayList<Persona>)getServletContext().getAttribute("poblacion");
 		
 		String dninum=req.getParameter("dni123");
+		if(dninum==""){
+			dninum="00000000";
+		}
 		int dniNum=Integer.parseInt(dninum);
 		
 		resp.setContentType("text/html");
 		PrintWriter out=resp.getWriter();
-		boolean entro=false;
+		
 		for(int i=0;i<poblacion.size();i++){
 			
 			if(poblacion.get(i).getDni()==dniNum){
