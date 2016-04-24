@@ -1,6 +1,7 @@
 package epis.unsa;
 import java.io.IOException;
 import java.io.PrintWriter;
+
 import javax.servlet.http.*;
 
 import java.util.ArrayList;
@@ -11,7 +12,12 @@ public class RegistroServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		
+		
+		ArrayList<Persona>poblacion0=new ArrayList<Persona>();
+		getServletContext().setAttribute("poblacion", poblacion0);
+		
 		ArrayList<Persona>poblacion=(ArrayList<Persona>)getServletContext().getAttribute("poblacion");
+		getServletContext().setAttribute("poblacion", poblacion);
 		
 		String dninum=req.getParameter("dni123");
 		int dniNum=Integer.parseInt(dninum);
@@ -25,6 +31,7 @@ public class RegistroServlet extends HttpServlet {
 		String piso=req.getParameter("piso123");
 		String aula=req.getParameter("aula123");
 		String direccion=req.getParameter("direccion123");
+		
 		
 		String esMiembro;
 		if(mienbro.equalsIgnoreCase("NO")){

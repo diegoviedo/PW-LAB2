@@ -24,8 +24,6 @@ public class ResultadoServlet extends HttpServlet {
 		poblacion.add(persona2);
 		poblacion.add(persona3);
 
-		resp.setContentType("text/html");
-		PrintWriter out=resp.getWriter();
 		
 		//==>PARTE IMPORTANTE Guardando arreglo poblacion en el conteiner con nombre población
 		//getServletContext().setAttribute("NombreVariableParaGuardarConteiner", VaribaleAGuardar);
@@ -34,8 +32,9 @@ public class ResultadoServlet extends HttpServlet {
 		String dninum=req.getParameter("dni123");
 		int dniNum=Integer.parseInt(dninum);
 		
-		
-		 boolean entro=false;
+		resp.setContentType("text/html");
+		PrintWriter out=resp.getWriter();
+		boolean entro=false;
 		for(int i=0;i<poblacion.size();i++){
 			
 			if(poblacion.get(i).getDni()==dniNum){
