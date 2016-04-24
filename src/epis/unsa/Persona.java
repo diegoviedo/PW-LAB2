@@ -1,9 +1,7 @@
 package epis.unsa;
 
-
-
 public class Persona {
-	Persona(){};
+	
 	private int dni;
 	private String nombre;
 	private String apellidos;
@@ -14,6 +12,11 @@ public class Persona {
 	private String piso;
 	private String aula;
 	private String direccion;
+	
+	Persona(){
+		
+	};
+	
 	Persona(int dni,String nombre,String apellidos,String mienbroMesa,
 			String mesaSufragio,String localVotacion, String pabellon, String piso, String aula,String direccion){ 
 		this.dni = dni;
@@ -28,7 +31,7 @@ public class Persona {
 		this.direccion = direccion;
 		
 	}
-
+	
 	public int getDni() {
 		return dni;
 	}
