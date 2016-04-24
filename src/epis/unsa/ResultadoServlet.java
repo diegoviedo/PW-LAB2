@@ -1,6 +1,7 @@
 package epis.unsa;
 import java.io.IOException;
 import java.io.PrintWriter;
+
 import javax.servlet.http.*;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ public class ResultadoServlet extends HttpServlet {
 			throws IOException {
 		
 		//Creando arreglo para la clase persona
-		ArrayList<Persona>poblacion=new ArrayList<Persona>();
+		ArrayList<Persona>poblacion1=new ArrayList<Persona>();
 
 		//añadiendo datos al arreglo persona.
 		Persona persona1=new Persona(72126234,"DIEGO","OVIEDO YAURI","No es Miembro de Mesa","301285","IE 104 LA RECOLETA","400","2","10","PASAJE LA RECOLETA");
@@ -20,14 +21,16 @@ public class ResultadoServlet extends HttpServlet {
 		Persona persona2=new Persona(73868584,"AUDREY","TACCA BARRANTES","Si es Miembro de Mesa","355623","IE LOS PANDAS","200","3","1","CALLE PERAL 507 ");
 		Persona persona3=new Persona(45655339,"RICHARD","ALVAREZ MAMANI","No es Miembro de Mesa","234533","UNIVERSIDAD WOW","100","2","3","CALLE LEGION 107");
 		
-		poblacion.add(persona1);
-		poblacion.add(persona2);
-		poblacion.add(persona3);
+		poblacion1.add(persona1);
+		poblacion1.add(persona2);
+		poblacion1.add(persona3);
 
 		
 		//==>PARTE IMPORTANTE Guardando arreglo poblacion en el conteiner con nombre población
 		//getServletContext().setAttribute("NombreVariableParaGuardarConteiner", VaribaleAGuardar);
-		getServletContext().setAttribute("poblacion", poblacion);
+		getServletContext().setAttribute("poblacion", poblacion1);
+		
+		ArrayList<Persona>poblacion=(ArrayList<Persona>)getServletContext().getAttribute("poblacion");
 		
 		String dninum=req.getParameter("dni123");
 		int dniNum=Integer.parseInt(dninum);
