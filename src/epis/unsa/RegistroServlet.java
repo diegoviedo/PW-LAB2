@@ -33,8 +33,9 @@ public class RegistroServlet extends HttpServlet {
 		ArrayList<Persona>poblacion=(ArrayList<Persona>)getServletContext().getAttribute("poblacion");
 		
 		String dninum=req.getParameter("dni123");
+		if(dninum=="")
+			dninum="00000000";
 		int dniNum=Integer.parseInt(dninum);
-		
 		String nombre=req.getParameter("nombre123");
 		String apellido=req.getParameter("apellido123");
 		String mienbro=req.getParameter("mienbro123");
@@ -52,6 +53,25 @@ public class RegistroServlet extends HttpServlet {
 		}else{
 			esMiembro="Si es Miembro de Mesa";
 		}
+		
+		
+		if(dniNum==00000000){
+			
+			nombre="--";
+			apellido="--";
+			mienbro="--";
+			mesa="--";
+			esMiembro="--";
+			
+			local="--";
+			pabellon="--";
+			piso="--";
+			aula="--";
+			direccion="--";
+		}
+		
+		
+		
 		Persona persona=new Persona(dniNum,nombre,apellido,esMiembro,mesa,local,pabellon,piso,aula,direccion);
 		poblacion.add(persona);
 		
@@ -67,7 +87,7 @@ public class RegistroServlet extends HttpServlet {
 				+ "<body>"
 				+ "<a href='index.html'>BUSCAR </a>"
 				+ "<a href='registro.jsp'>REGISTRAR </a>"
-				+ "<a href='index.html'>VER </a>"
+				+ "<a href='/ver'>VER </a>"
 				+ "<h1>AGREGADO CORRECTAMENTE>"
 				+ "<p>"+dniNum+" "+nombre+" "+apellido+" "+esMiembro+" "+mesa+" "+local+" "+pabellon+" "+piso+" "+aula+" "+direccion
 				+ "</p></body></html>");
