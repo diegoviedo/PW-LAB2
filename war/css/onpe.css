@@ -1,0 +1,118 @@
+@CHARSET "ISO-8859-1";
+
+				 	*{font-family: sans-serif;} 
+				 .centro {	margin-left: 200px; 
+				 			height: 500px; 
+				 			width: 1000px; 
+				 			text-align: center; 
+				 			background-color: white; 
+				 	}  
+				 .titulo{ 	
+				 			margin-top: 10px; 
+				 			margin-bottom: 10px; 
+				 			height: 60px; 
+				 			width: 1000px; 
+				 			text-align: center; 
+				 			background-color: #25264C;} 
+				 .logo{ 
+				 			width: 150px; 
+				 			height: 60px; 
+				 			float: right;} 
+				 .bloque1 { 
+				 			float: left; 
+				 			margin: 10px 10px 10px 10px; 
+				 			height: 400px; 
+				 				width: 450px; 
+				 			border-right: 3px solid silver;	} 
+				 .bloque { 
+				 				float: left; 
+				 				margin: 10px 10px 10px 10px; 
+				 				height: 400px; 
+				 				width: 450px;} 
+				 .cuadro { 
+				 				text-align: center; 
+				 				margin: 10px 10px 10px 10px; 
+				 				height: 50px; 
+				 				width: 400px; 
+				 				color: #25264C;} 
+				 .gris{ 
+				 				margin:0px 0px 0px; 
+				 				color: #5E5C75;} 
+				 .azul{	 
+				 				color:#25264C; 
+				 				margin: 0px 0px 0px 0px;} 
+				 .azul2{ 
+				 				color:#7F7FF7; 
+				 				margin: 0px 0px 0px 0px; 
+				 	} 
+				 .rojo{ 
+				 				color: #E61529; 
+				 				font-size: 23px; 
+				 } 
+				 .naranja{ 
+				 				color: #EBA620;
+				 	} 
+				 				
+				 .onpe{ 		text-align: center; 
+				 				margin-left:100px;
+				 				color:white; 
+				 				padding-top: 10px;} 
+				 .izq{ 
+				 				float: left;} 
+				 .der{ 
+				 				float: right;} 
+				 .cuadro1 { 
+				 				text-align: center; 
+				 				margin: 90px 10px 20px 10px; 
+				 				height: 50px; 
+				 				width: 400px;	 
+				 				color: #25264C;} 
+				 .cuadritoizq{ 
+				 				float: left; 
+				 				margin: 10px 0px 10px 20px; 
+				 				height: 50px; 
+				 				width: 100px; 
+				 				border-right: 2px solid silver;	} 
+				 .cuadritoizq3{ 
+				 				float: left; 
+				 				margin: 10px 0px 10px 20px; 
+				 				height: 50px; 
+				 				width: 100px;} 
+				 .dirizq{ 
+				 				float: left; 
+				 				margin: 10px 0px 10px 50px; 
+				 				height: 20px; 
+				 				width: 150px; 
+				 				background-color: #E8E3E3;	 
+				 	} 
+				 .dirder{ 
+				 				float: left; 
+				 				margin: 10px 0px 10px 0px; 
+				 				height: 20px; 
+				 				width: 150px; 
+				 				background-color: #F1E6E6;} 
+				 footer{ 
+				 				margin-left:20px; 
+				 				font-size:17px; 
+				 				color:blue; 
+				 				font-style:italic; 
+				 				
+				 } 
+				#contenedor {
+				    display: table;
+				    border: 2px solid #000;
+				    width: 300px;
+				    text-align: center;
+				    margin: 0 auto;
+				}
+				#contenidos {
+				    display: table-row;
+				}
+				.columna {
+				    display: table-cell;
+				    border: 1px solid #000;
+				    vertical-align: middle;
+				    padding: 10px;
+				}
+				 
+				
