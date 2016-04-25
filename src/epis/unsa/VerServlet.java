@@ -11,11 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 public class VerServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
-<<<<<<< HEAD
-
-=======
-//<<<<<<< HEAD
->>>>>>> origin/PW2-lab3
 		
 		//preguntando si la variable no existe para crearla.
 		if(getServletContext().getAttribute("poblacion")==null){
@@ -35,18 +30,17 @@ public class VerServlet extends HttpServlet {
 			//getServletContext().setAttribute("NombreVariableParaGuardarConteiner", VaribaleAGuardar);
 			getServletContext().setAttribute("poblacion", poblacion1);
 		}
-<<<<<<< HEAD
+
 
 		//ArrayList<Persona>poblacion=(ArrayList<Persona>)getServletContext().getAttribute("poblacion");
 		//falta poner css
 	
-=======
-//=======
+
 		//ArrayList<Persona>poblacion=(ArrayList<Persona>)getServletContext().getAttribute("poblacion");
 		//falta poner css
 // PW2-lab3
 		
->>>>>>> origin/PW2-lab3
+
 		ArrayList<Persona>poblacion=(ArrayList<Persona>)getServletContext().getAttribute("poblacion");	
 		resp.setContentType("text/html");
 		PrintWriter out=resp.getWriter();
