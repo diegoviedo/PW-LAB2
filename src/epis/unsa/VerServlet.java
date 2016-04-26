@@ -49,14 +49,17 @@ public class VerServlet extends HttpServlet {
 		"<!DOCTYPE html>"
 		+"<head>"
 			+"<meta charset='UTF-8'>"
-			+"<title>VerLista</title>"
+			+"<title>VER LISTA</title>"
 			+"<link rel='stylesheet' type='text/css' href='../css/onpe.css'>"
 		+"</head>"
 		+"<body>"
-			+"<a href='index.html'>BUSCAR </a>"
-			+"<a href='registro.jsp'>REGISTRAR </a>"
-			+"<a href='/ver'>VER </a>"
+			+ "<div class='cuadritoizq3'><ul>"
+			+ "<li><p class='gris'><a href='index.html'><b>BUSCAR </b></a></p>"
+			+ "<li><p class='gris'><a href='registro.jsp'><b>REGISTRO</b></a> </p>"
+			+ "<li><p class='gris'><a href='/ver'><b>VER</b> </a> </p></ul></div>"
+			+ "	<div class='oracion'><h2 class='gris'>LISTA DE VOTANTES</h2></div>"	
 			+"<div id='contenedor'>"
+			
 		    +"<div id='contenidos'>"
 		    	+"<div class='columna'>DNI</div>"
 		        +"<div class='columna'>Nombres</div>"
@@ -89,6 +92,9 @@ public class VerServlet extends HttpServlet {
 					
 		out.println(
 				"</div>"
+						+ "	<footer>CREADO POR :Diego Oviedo Yauri <br>CURSO : PW2<br>Laboratorio-Grupo: 03-E"
+						+ "<br>25 de Abril del 2016 09:00 </footer>"
+				
 				+"</body>"
 				+"</html>"
 				); 

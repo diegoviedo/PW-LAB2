@@ -27,10 +27,13 @@ public class RegistroServlet extends HttpServlet {
 			poblacion1.add(persona3);
 			//==>PARTE IMPORTANTE Guardando arreglo poblacion en el conteiner con nombre población
 			//getServletContext().setAttribute("NombreVariableParaGuardarConteiner", VaribaleAGuardar);
+		
+			
 			getServletContext().setAttribute("poblacion", poblacion1);
 		}
-		
 		ArrayList<Persona>poblacion=(ArrayList<Persona>)getServletContext().getAttribute("poblacion");
+		
+		
 		
 		String dninum=req.getParameter("dni123");
 		if(dninum=="")
@@ -82,14 +85,31 @@ public class RegistroServlet extends HttpServlet {
 		
 		out.println(
 				"<!DOCTYPE html><html><head>"
+				+"<meta charset='UTF-8'>"
 				+ "<title>AGREGADO CORRECTAMENTE</title>"
+				+"<link rel='stylesheet' type='text/css' href='../css/onpe.css'>"		
 				+ "</head>"
 				+ "<body>"
-				+ "<a href='index.html'>BUSCAR </a>"
-				+ "<a href='registro.jsp'>REGISTRAR </a>"
-				+ "<a href='/ver'>VER </a>"
-				+ "<h1>AGREGADO CORRECTAMENTE>"
-				+ "<p>"+dniNum+" "+nombre+" "+apellido+" "+esMiembro+" "+mesa+" "+local+" "+pabellon+" "+piso+" "+aula+" "+direccion
-				+ "</p></body></html>");
+
+				+ "	<div class='cuadritoizq3'><ul>"
+				+ "<li><p class='gris'><a href='index.html'><b>BUSCAR </b></a></p>"
+				+ "<li><p class='gris'><a href='registro.jsp'><b>REGISTRO</b></a> </p>"
+				+ "<li><p class='gris'><a href='/ver'><b>VER</b> </a> </p></ul></div>"
+				
+
+				+ "	<div class='centro'>"
+				+ "	<div class='titulo'><h2 class='onpe'>AGREGADO CORRECTAMENTE</h2></div>"
+				+ "	<div class'oracion'><p class='gris'>"+dniNum+" "+nombre+" "+apellido+" "+"</p></div>"
+				+ "	<div class'oracion'><p class='gris'>"+esMiembro+"</p></div>"
+				+ "	<div class'oracion'><p class='gris'>MESA :"+mesa+"</p></div>"
+				+ "	<div class'oracion'><p class='gris'>"+local+" "+pabellon+" "+piso+" "+aula+" "+direccion+"</p></div>"
+			
+				+ "	<div class'oracion'><p class='gris'> <a href='/ver'>VER CUADRO ACTUAL </a></p></div>"
+				+ "</div>"
+				
+				+ "	<footer>CREADO POR :Diego Oviedo Yauri <br>CURSO : PW2<br>Laboratorio-Grupo: 03-E"
+				+ "<br>25 de Abril del 2016 09:00 </footer>"
+				
+				+ "</body></html>");
 		
 	}}

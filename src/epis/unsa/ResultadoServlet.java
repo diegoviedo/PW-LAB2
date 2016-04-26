@@ -48,14 +48,18 @@ public class ResultadoServlet extends HttpServlet {
 				//CODIGO
 				out.println(
 						"<!DOCTYPE html><html><head>"
-						+ "<title>"
-						+ "PRACTICA 1  LAB 2</title>"
+						+ "<meta charset='UTF-8'>"
+						+ "<title>RESULTADO ONPE</title>"
 				+"<link rel='stylesheet' type='text/css' href='../css/onpe.css'>"
 				+ "</head>"
 				+ "<body>"
-				+ "<a href='index.html'>BUSCAR </a>"
-				+ "<a href='registro.jsp'>REGISTRAR </a>"
-				+ "<a href='/ver'>VER </a>"
+				
+				+ "	<div class='cuadritoizq3'><ul>"
+				+ "<li><p class='gris'><a href='index.html'><b>BUSCAR </b></a></p>"
+				+ "<li><p class='gris'><a href='registro.jsp'><b>REGISTRO</b></a> </p>"
+				+ "<li><p class='gris'><a href='/ver'><b>VER</b> </a> </p></ul></div>"
+				
+
 				+ "	<div class='centro'>"
 				+ "	<div class='titulo'>"
 				+ "			<div class='logo'>"
@@ -88,11 +92,12 @@ public class ResultadoServlet extends HttpServlet {
 				+ "	<div class='dirder'><p class='azul2'>Referencia:</p></div>	</div>"
 				+ "	<div class='cuadro'>"
 				+ "	<p class='azul'><b>"+poblacion.get(i).getDireccion()+"</b></p></div></div></div>"
-				+ "	<footer>CREADO POR :Diego Oviedo Yauri <br>CURSO : PW2<br>Laboratorio-Grupo: 02-E<br>17 de Abril del 2016 09:00 </footer>"
+				+ "	<div class='cuadro'>"
+				+ "	<footer>CREADO POR :Diego Oviedo Yauri <br>CURSO : PW2<br>Laboratorio-Grupo: 03-E<br>25 de Abril del 2016 09:00 </footer>"
 				+"<p><a href='http://jigsaw.w3.org/css-validator/check/referer'><img style='border:0;width:88px;height:31px'"
 				+" src='http://jigsaw.w3.org/css-validator/images/vcss' alt='�CSS V�lido!' /></a></p>"
 		            
-				+ "	<a href='index.html'>REGRESAR</a></body></html>" );
+				+ "	<a href='index.html'>REGRESAR</a></div></body></html>" );
 				
 				
 				entro=true;
@@ -101,13 +106,28 @@ public class ResultadoServlet extends HttpServlet {
 		}
 		if(entro==false){
 			out.print("<!DOCTYPE html><html><head>"
+					+ "<meta charset='UTF-8'>"
 					+ "<title>DNI NO ENCONTRADO</title>"
-					+ "	</head>"
-					+ "<body>"
-					+ "<a href='index.html'>BUSCAR </a>"
-					+ "<a href='registro.jsp'>REGISTRAR </a>"
-					+ "<a href='/ver'>VER </a>"
-					+ "<p>NO SE ENCONTRO EL DNI</p>"
+			+"<link rel='stylesheet' type='text/css' href='../css/onpe.css'>"
+			+ "</head>"
+			+ "<body>"
+			
+			+ "	<div class='cuadritoizq3'><ul>"
+			+ "<li><p class='gris'><a href='index.html'><b>BUSCAR </b></a></p>"
+			+ "<li><p class='gris'><a href='registro.jsp'><b>REGISTRO</b></a> </p>"
+			+ "<li><p class='gris'><a href='/ver'><b>VER</b> </a> </p></ul></div>"
+			
+
+			+ "	<div class='centro'>"
+			+ "	<div class='titulo'>"
+			+ "<h2 class='onpe'>NO ENCONTRADO</h2>"
+			+ "	<div class='oracion'>"
+			+ "<h2 class='gris'>DNI NO ENCONTRADO EN LA BASE DE DATOS</h2>"
+			+ "</div>"
+			+ "</div>"
+			
+			+ "<footer>CREADO POR :Diego Oviedo Yauri <br>CURSO : PW2<br>Laboratorio-Grupo: 03-E"
+			+ "<br>25 de Abril del 2016 09:00 </footer>"
 
 					+ "</body></html>");
 		}
