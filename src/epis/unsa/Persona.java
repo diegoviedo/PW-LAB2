@@ -1,7 +1,7 @@
 package epis.unsa;
 
 public class Persona {
-	
+	//haciendo pruebas de commit en laboratorio web
 	private int dni;
 	private String nombre;
 	private String apellidos;
