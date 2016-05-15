@@ -3,6 +3,7 @@ package epis.unsa;
 public class Persona {
 	//haciendo pruebas de commit en laboratorio web
 	//Otra prueba
+	//Abriendo eclipse en la carpeta GItHUB e importamos
 	private int dni;
 	private String nombre;
 	private String apellidos;
